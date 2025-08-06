@@ -17,13 +17,13 @@
   </header>
   <section id="user-goals">
     <h2>My course goals</h2>
-    <input type="text" v-mdoel="enteredGoalValue" />
+    <input type="text" v-model="enteredGoalValue" />
     <button @click="addGoal">Add Goal</button>
     <!-- <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p> -->
-    <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
     <!-- <ul v-show="goals.length > 0"> -->
+    <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
     <ul v-else>
-      <li>Goal</li>
+      <li v-for="goal of goals">{{ goal }}</li>
     </ul>
   </section>
 </body>
