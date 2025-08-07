@@ -23,8 +23,14 @@
     <!-- <ul v-show="goals.length > 0"> -->
     <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
     <ul v-else>
-      <li v-for="goal of goals">{{ goal }}</li>
+      <li v-for="(goal, index) in goals">{{goal}} - {{index}}</li>
     </ul>
+    <!-- <ul>
+      <li v-for="num in 10">{{num}} </li>
+    </ul> -->
+    <!-- <ul>
+      <li v-for="(value, key, index) in {name: 'Dzk', age: 24}">{{key}} : {{value}} - {{index}}</li>
+    </ul> -->
   </section>
 </body>
 
